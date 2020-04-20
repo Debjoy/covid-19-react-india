@@ -133,7 +133,7 @@ body{
     font-weight: bold;
     color:white;
     box-shadow: 0px 0px 27px -11px #273856;
-
+    transition: all ease 0.3s;
 }
 .refresh-btn:active{
     outline:none;
@@ -142,6 +142,10 @@ body{
 .refresh-btn:focus{
     outline:none;
     border:none;
+}
+.refresh-btn:hover{
+    box-shadow: 0px 0px 27px -5px #273856;
+    background-color: #1a2942;
 }
 .updates{
     text-align: center;

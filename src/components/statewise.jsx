@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 class Statewise extends Component {
-    state = {  }
+    state = { 
+        regional:this.props.regional
+     }
     render() { 
+        const {regional} =this.state;
         return (
             <div className="col-md-6 section ">
             <h3 className="section-title">State-wise</h3>
@@ -17,48 +20,20 @@ class Statewise extends Component {
                       </tr>
                 </thead>
                 <tbody>
+                    {regional.length>0?regional
+                    .sort((a,b)=>b.totalConfirmed-a.totalConfirmed)
+                    .map((data)=>
+                        <tr className="mcard-inline" key={data.loc}>
+                            <td className="cell-text">{data.loc}</td>
+                            <td className="cell cell-primary">{data.totalConfirmed}</td>
+                            <td className="cell cell-success">{data.discharged}</td>
+                            <td className="cell cell-danger">{data.deaths}</td>
+                            <td className="cell cell-info">{data.totalConfirmed-data.discharged-data.deaths}</td>
+                        </tr>   
+                    ): 
                     <tr className="mcard-inline">
-                        <td className="cell-text">Andaman and Nicobar Islands</td>
-                        <td className="cell cell-primary">15,632</td>
-                        <td className="cell cell-success">534</td>
-                        <td className="cell cell-danger">236</td>
-                        <td className="cell cell-info">10012</td>
-                    </tr>
-                    <tr className="mcard-inline">
-                        <td className="cell-text">Andaman and Nicobar Islands</td>
-                        <td className="cell cell-primary">0</td>
-                        <td className="cell cell-success">0</td>
-                        <td className="cell cell-danger">0</td>
-                        <td className="cell cell-info">0</td>
-                    </tr>                        
-                    <tr className="mcard-inline">
-                        <td className="cell-text">Andaman and Nicobar Islands</td>
-                        <td className="cell cell-primary">15,632</td>
-                        <td className="cell cell-success">534</td>
-                        <td className="cell cell-danger">236</td>
-                        <td className="cell cell-info">10012</td>
-                    </tr>
-                    <tr className="mcard-inline">
-                        <td className="cell-text">Andaman and Nicobar Islands</td>
-                        <td className="cell cell-primary">0</td>
-                        <td className="cell cell-success">0</td>
-                        <td className="cell cell-danger">0</td>
-                        <td className="cell cell-info">0</td>
-                    </tr>
-                    <tr className="mcard-inline">
-                        <td className="cell-text">Andaman and Nicobar Islands</td>
-                        <td className="cell cell-primary">15,632</td>
-                        <td className="cell cell-success">534</td>
-                        <td className="cell cell-danger">236</td>
-                        <td className="cell cell-info">10012</td>
-                    </tr>
-                    <tr className="mcard-inline">
-                        <td className="cell-text">Andaman and Nicobar Islands</td>
-                        <td className="cell cell-primary">15,632</td>
-                        <td className="cell cell-success">534</td>
-                        <td className="cell cell-danger">236</td>
-                        <td className="cell cell-info">10012</td>
-                    </tr>
+                    </tr>}
+                    
                 </tbody>
                 
             </table>
