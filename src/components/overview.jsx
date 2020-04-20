@@ -9,7 +9,9 @@ class Overview extends Component {
         recovered_cases_time_series:[],
         deaths_cases_time_series:[],
         active_cases_time_series:[],
-        max:0
+        max:0,
+        lastUpdateMins:this.props.lastUpdateMins,
+        lastUpdateHrs:this.props.lastUpdateHrs
      }
     componentDidMount(){
         axios.get("https://api.covid19india.org/data.json").then(response => {
@@ -71,8 +73,8 @@ class Overview extends Component {
             </div>
         </div>
         <div className="section-content updates">
-            <p className="lead last-update">last updated 12hrs ago</p>
-            <button className="refresh-btn" >Refresh <i className="fas fa-redo-alt"></i></button>
+            <p className="lead last-update">last updated {Math.round(this.state.lastUpdateHrs)} hrs {Math.round(this.state.lastUpdateMins)} minutes ago</p>
+            <button className="refresh-btn" onClick={this.props.onRefresh}>Refresh <i className="fas fa-redo-alt"></i></button>
         </div>
     </div>  );
     }
