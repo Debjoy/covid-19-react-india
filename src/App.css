@@ -1,38 +1,189 @@
-.App {
-  text-align: center;
+body{
+    /* color:#273856; */
+    color:#5a6f94;
+    /* font-family: varela; */
+}
+.massive-watermark{
+    position:fixed;
+    font-size:15rem;
+    opacity: 0.05;
+    font-family: sans-serif;
+    top: 10%;
+    left: 50%;
+    display: inline-table;
+    word-break:break-word;
+    transform: translate(-65%, 0%);
+}
+.massive-watermark-bottom{
+    position:fixed;
+    font-size:15rem;
+    opacity: 0.05;
+    font-family: sans-serif;
+    bottom:0%;
+    right: 40%;
+    display: inline-table;
+    word-break:break-word;
+    transform: translate(75%, 0%);
+}
+.txt-primary{
+    color:#2962ff;
+    opacity: 0.8;
+}
+.left-heading{
+    display:inline;
+    font-size:3rem;
+}
+.left-heading h1{
+    display: inline;
+}
+.right-heading{
+    float:right;
+    font-size:1rem;
+    padding-top:34px;
+}
+.top-bar{
+    padding:30px 20px;
+}
+.content{            
+    padding:0px 20px;
+}
+.section{
+    color:#5a6f94;
+}
+.section-title{
+    text-align:center;
+    margin:30px auto;
+    margin-bottom:40px;
+}
+.lead{
+    font-weight:normal !important;
+}
+.card-holder{
+    display: flex;
+}
+.mcard{
+    width: 100%;
+    text-align:center;
+    padding: 30px 10px;
+    margin:10px;
+    border-radius:10px;
+}
+.mcard p{
+    margin:0;
+}
+.value-label{
+    margin-bottom:10px !important;
+}
+.main-value{
+    font-size:1.5rem;
+    margin-top:10px !important;
+}
+.mcard-primary{
+    color:white;
+    box-shadow: 0px 0px 15px 0px #2962ff;
+    background: rgba(41,98,255,1);
+    background: -moz-linear-gradient(left, rgba(41,98,255,1) 0%, rgba(110,43,255,1) 100%);
+    background: -webkit-linear-gradient(left, rgba(41,98,255,1) 0%, rgba(110,43,255,1) 100%);
+    background: -o-linear-gradient(left, rgba(41,98,255,1) 0%, rgba(110,43,255,1) 100%);
+    background: -ms-linear-gradient(left, rgba(41,98,255,1) 0%, rgba(110,43,255,1) 100%);
+    background: linear-gradient(to right, rgba(41,98,255,1) 0%, rgba(110,43,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2962ff', endColorstr='#6e2bff', GradientType=1 );
+}
+.mcard-danger{
+    color:white;            
+    box-shadow: 0px 0px 15px 0px #ff4747;
+    background: rgba(255,71,71,1);
+    background: -moz-linear-gradient(left, rgba(255,71,71,1) 0%, rgba(255,108,71,1) 100%);
+    background: -webkit-linear-gradient(left, rgba(255,71,71,1) 0%, rgba(255,108,71,1) 100%);
+    background: -o-linear-gradient(left, rgba(255,71,71,1) 0%, rgba(255,108,71,1) 100%);
+    background: -ms-linear-gradient(left, rgba(255,71,71,1) 0%, rgba(255,108,71,1) 100%);
+    background: linear-gradient(to right, rgba(255,71,71,1) 0%, rgba(255,108,71,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4747', endColorstr='#ff6c47', GradientType=1 );
+}
+.mcard-success{
+    color:white;            
+    box-shadow: 0px 0px 15px 0px #00cf55;
+    background: rgba(0,207,86,1);
+    background: -moz-linear-gradient(left, rgba(0,207,86,1) 0%, rgba(0,207,0,1) 100%);background: -webkit-linear-gradient(left, rgba(0,207,86,1) 0%, rgba(0,207,0,1) 100%);
+    background: -o-linear-gradient(left, rgba(0,207,86,1) 0%, rgba(0,207,0,1) 100%);
+    background: -ms-linear-gradient(left, rgba(0,207,86,1) 0%, rgba(0,207,0,1) 100%);
+    background: linear-gradient(to right, rgba(0,207,86,1) 0%, rgba(0,207,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00cf56', endColorstr='#00cf00', GradientType=1 );
+}
+.mcard-info{
+    color:white;            
+    box-shadow: 0px 0px 15px 0px #273856;
+    background: rgba(39,56,86,1);
+    background: -moz-linear-gradient(left, rgba(39,56,86,1) 0%, rgba(40,39,84,1) 100%);background: -webkit-linear-gradient(left, rgba(39,56,86,1) 0%, rgba(40,39,84,1) 100%);
+    background: -o-linear-gradient(left, rgba(39,56,86,1) 0%, rgba(40,39,84,1) 100%);
+    background: -ms-linear-gradient(left, rgba(39,56,86,1) 0%, rgba(40,39,84,1) 100%);
+    background: linear-gradient(to right, rgba(39,56,86,1) 0%, rgba(40,39,84,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#273856', endColorstr='#282754', GradientType=1 );
+}
+.last-update{
+    text-align:center;
+    margin:20px auto;
+}
+.refresh-btn{
+    background-color: #273856;
+    border: none;
+    border-radius: 41px;
+    margin:auto;
+    padding: 5px 20px;
+    font-weight: bold;
+    color:white;
+    box-shadow: 0px 0px 27px -11px #273856;
+
+}
+.refresh-btn:active{
+    outline:none;
+    border:none;
+}
+.refresh-btn:focus{
+    outline:none;
+    border:none;
+}
+.updates{
+    text-align: center;
+}
+@media screen and (max-width: 640px){
+    .left-heading h1{
+        font-size:1.5rem;
+    }
+    .right-heading{
+        font-size:0.8rem;
+        padding-top:40px;
+    }
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+        .mcard-inline { 
+            color:#5a6f94;
+        }
+        th{                    
+            color:rgba(39,56,86,1);
+        }
+        .cell{  
+            font-weight: bold;
+            opacity: 0.8;
+        }
+        .cell-primary{
+            color: rgba(41,98,255,1);
+           
+        }
+        .cell-success{             
+            color: rgba(0,207,86,1);
+            
+        }
+        .cell-danger{               
+            color: rgba(255,71,71,1);
+            
+        }
+        .cell-info{
+            color: rgba(39,56,86,1);
+            
+        }
+        @media screen and (max-width:420px){
+            .cell-text{
+                font-size:0.8rem;
+            }
+        }
