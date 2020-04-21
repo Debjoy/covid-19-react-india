@@ -14,6 +14,10 @@ body{
     word-break:break-word;
     transform: translate(-65%, 0%);
 }
+.unofficial-text{
+    margin:20px 0px;
+    font-size:1rem;
+}
 .massive-watermark-bottom{
     position:fixed;
     font-size:15rem;
@@ -124,31 +128,110 @@ body{
     text-align:center;
     margin:20px auto;
 }
-.refresh-btn{
-    background-color: #273856;
-    border: none;
-    border-radius: 41px;
-    margin:auto;
-    padding: 5px 20px;
+.butn{    
+    border: none;    
+    border-radius: 41px;    
+    padding: 5px 20px;    
     font-weight: bold;
+}
+.butn:active{
+    outline:none;
+    border:none;
+}
+.butn:focus{
+    outline:none;
+    border:none;
+}
+.refresh-btn{
+    margin:auto;
     color:white;
     box-shadow: 0px 0px 27px -11px #273856;
     transition: all ease 0.3s;
-}
-.refresh-btn:active{
-    outline:none;
-    border:none;
-}
-.refresh-btn:focus{
-    outline:none;
-    border:none;
+    background: rgba(39,56,86,1);
+    background: -moz-linear-gradient(left, rgba(39,56,86,1) 0%, rgba(40,39,84,1) 100%);background: -webkit-linear-gradient(left, rgba(39,56,86,1) 0%, rgba(40,39,84,1) 100%);
+    background: -o-linear-gradient(left, rgba(39,56,86,1) 0%, rgba(40,39,84,1) 100%);
+    background: -ms-linear-gradient(left, rgba(39,56,86,1) 0%, rgba(40,39,84,1) 100%);
+    background: linear-gradient(to right, rgba(39,56,86,1) 0%, rgba(40,39,84,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#273856', endColorstr='#282754', GradientType=1 );
 }
 .refresh-btn:hover{
     box-shadow: 0px 0px 27px -5px #273856;
     background-color: #1a2942;
 }
+
+.mohw{
+    margin:10px 0px;
+    background-color: white;
+    box-shadow: 0px 0px 10px -5px #273856;
+    color: rgba(39,56,86,1);
+    transition:all ease 0.3s;
+}
+.mohw:hover{    
+    box-shadow: 0px 0px 15px -5px #00cf55;
+    background: white;
+    color: #00cf55;
+}
+
+.covid19india{
+    background-color: white;
+    box-shadow: 0px 0px 10px -5px #273856;
+    color: rgba(39,56,86,1);
+    transition:all ease 0.3s;
+}
+.covid19india:hover{   
+    box-shadow: 0px 0px 15px -5px rgba(41,98,255,1);
+    background: white;
+    color: rgba(41,98,255,1);
+}
 .updates{
     text-align: center;
+}
+.contact-title{
+    margin:30px 0px 20px 0px;
+}
+.social-media {
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: white;
+    color:#5a6f94;
+    box-shadow:0px 0px 10px -3px #5a6f94;
+    transition:all ease 0.3s;
+}
+.facebook{
+    color:rgba(41,98,255,1);
+}
+.linkedin{
+    color:#2990ff;
+}
+.mail{
+    color:#ff4747;
+}
+.mail:hover{
+    box-shadow:0px 0px 15px -5px #ff4747;
+}
+.linkedin:hover{
+    box-shadow:0px 0px 15px -5px #2990ff;
+}
+.facebook:hover{
+    box-shadow:0px 0px 15px -5px rgba(41,98,255,1);
+}
+.github:hover{
+    box-shadow:0px 0px 15px -5px #273856;
+}
+.social-link a:hover{
+    text-decoration: none;
+    color:#273856;
+    font-weight: 600;
+}
+.social-link{
+    margin:20px 0px;
+}
+.social-link a{    
+    color:#5a6f94;
+    transition: all ease 0.3s;
+}
+.link-heart{
+    color:#ff4747;
 }
 @media screen and (max-width: 640px){
     .left-heading h1{
@@ -186,8 +269,31 @@ body{
             color: rgba(39,56,86,1);
             
         }
+        .footer-bottom{
+            display:none;
+        }
+        .footer-content{
+            margin:30px 0px;
+            text-align:center;
+        }
+        
         @media screen and (max-width:420px){
             .cell-text{
                 font-size:0.8rem;
+            }
+        }
+        @media only screen and (max-width: 768px) {
+            .overview {
+                order: 1;
+            }
+            .statewise {
+                order: 2;
+            }
+            .footer-bottom{
+                order:3;
+                display:block;
+            }
+            .footer-aside{
+                display:none;
             }
         }

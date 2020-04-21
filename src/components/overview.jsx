@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Line } from 'react-peity';
+import Footer from './footer';
 import axios from 'axios'
 
 class Overview extends Component {
@@ -44,7 +45,7 @@ class Overview extends Component {
 
     
     render() { 
-        return ( <div className="col-md-6 section">
+        return ( <div className="col-md-6 section overview">
         <h3 className="section-title">Overview</h3>
         <div className="section-content">
             <div className="card-holder">
@@ -74,8 +75,12 @@ class Overview extends Component {
         </div>
         <div className="section-content updates">
             <p className="lead last-update">last updated {Math.round(this.state.lastUpdateHrs)} hrs {Math.round(this.state.lastUpdateMins)} minutes ago</p>
-            <button className="refresh-btn" onClick={this.props.onRefresh}>Refresh <i className="fas fa-redo-alt"></i></button>
+            <button className="butn refresh-btn" onClick={this.props.onRefresh}>Refresh <i className="fas fa-redo-alt"></i></button>
         </div>
+        <div className="section-content footer-aside">
+             <Footer />
+        </div>
+        
     </div>  );
     }
 }

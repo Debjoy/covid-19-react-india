@@ -6,7 +6,7 @@ class Statewise extends Component {
     render() { 
         const {regional} =this.state;
         return (
-            <div className="col-md-6 section ">
+            <div className="col-md-6 section statewise">
             <h3 className="section-title">State-wise</h3>
             <div className="table-responsive">
             <table className="section-content table table-borderless">

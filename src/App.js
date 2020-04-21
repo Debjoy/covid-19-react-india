@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/header';
 import Overview from './components/overview';
 import Statewise from './components/statewise';
+import Footer from './components/footer';
 import axios from 'axios';
 import { ToastContainer,toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -64,9 +65,10 @@ class App extends Component {
     <h1 className="massive-watermark-bottom">INDIA</h1>
     <Header/>
     <div className="container content">
-      <div className="row">
-      <Statewise regional={regional} key={dataUpdate+"regional"}/>
+      <div className="row flexRow">
+        <Statewise regional={regional} key={dataUpdate+"regional"}/>
         <Overview summary={summary} onRefresh={this.loadData} lastUpdateHrs={lastUpdateHrs} lastUpdateMins={lastUpdateMins} key={dataUpdate+"overview"}/>
+        <div className="col-md-6 section footer-bottom"><Footer /></div>
         
       </div>
     </div>
